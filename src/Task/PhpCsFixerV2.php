@@ -67,7 +67,6 @@ class PhpCsFixerV2 extends AbstractExternalTask
 
         $arguments = $this->processBuilder->createArgumentsForCommand('php-cs-fixer');
         $arguments->add('--format=json');
-        $arguments->add('--dry-run');
         $arguments->addOptionalBooleanArgument('--allow-risky=%s', $config['allow_risky'], 'yes', 'no');
         $arguments->addOptionalArgument('--cache-file=%s', $config['cache_file']);
         $arguments->addOptionalArgument('--config=%s', $config['config']);
